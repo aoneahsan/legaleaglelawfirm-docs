@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "legaleaglelaws"
+  },
+  "targets": {
+    "legaleaglelaws": {
+      "hosting": {
+        "legaleaglelaws-docs": ["legaleaglelaws-docs"]
+      }
+    }
+  }
+}

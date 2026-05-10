@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" role="img" aria-label="Legal Eagle Law Firm — Documentation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B3B6F"/>
+      <stop offset="100%" stop-color="#050D1C"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5E19B"/>
+      <stop offset="100%" stop-color="#8A6A1E"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="rgba(245,225,155,0.18)"/>
+      <stop offset="100%" stop-color="rgba(245,225,155,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="628" fill="url(#bg)"/>
+  <rect width="1200" height="628" fill="url(#halo)"/>
+
+  <!-- decorative scales of justice mark -->
+  <g transform="translate(180,180)" opacity="0.95">
+    <circle cx="120" cy="120" r="100" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <line x1="120" y1="40" x2="120" y2="200" stroke="url(#gold)" stroke-width="3"/>
+    <line x1="60" y1="80" x2="180" y2="80" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M70 80 L40 130 Q60 150 100 130 Z" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+    <path d="M170 80 L140 130 Q160 150 200 130 Z" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+    <circle cx="120" cy="40" r="6" fill="url(#gold)"/>
+  </g>
+
+  <!-- text -->
+  <g font-family="'Source Serif 4', Georgia, serif" fill="#FDFAF2">
+    <text x="460" y="240" font-size="70" font-weight="600">Legal Eagle</text>
+    <text x="460" y="320" font-size="46" font-weight="400" fill="#F5E19B">Documentation</text>
+    <text x="460" y="395" font-size="22" font-family="-apple-system, 'Segoe UI', sans-serif" fill="#CBD5E0">Modern legal services for Pakistan +</text>
+    <text x="460" y="425" font-size="22" font-family="-apple-system, 'Segoe UI', sans-serif" fill="#CBD5E0">a practice-management SaaS for lawyers</text>
+    <text x="460" y="500" font-size="18" font-family="-apple-system, 'Segoe UI', sans-serif" fill="#94A3B8">docs.legaleaglelaws.com</text>
+    <text x="460" y="528" font-size="16" font-family="-apple-system, 'Segoe UI', sans-serif" fill="#94A3B8">Built by Ahsan Mahmood · aoneahsan.com</text>
+  </g>
+
+  <!-- bottom border accent -->
+  <rect x="0" y="612" width="1200" height="16" fill="url(#gold)"/>
+</svg>

@@ -1,0 +1,137 @@
+/**
+ * Legal Eagle Law Firm — brand tokens
+ *
+ * Palette:
+ *   Navy   #1B3B6F  (primary, deep blue from the firm's seal & app boot loader)
+ *   Gold   #C9A227  (accent, "law book" gold — slightly darker than the original gilt
+ *                    so it survives WCAG AA contrast on white)
+ *   Cream  #F5E19B  (subtle highlight for dark surfaces)
+ *
+ * Light mode pairs Navy text on Cream-tinted white; Dark mode pairs Cream on near-black Navy.
+ */
+
+:root {
+  --ifm-color-primary: #1b3b6f;
+  --ifm-color-primary-dark: #18345f;
+  --ifm-color-primary-darker: #163057;
+  --ifm-color-primary-darkest: #122847;
+  --ifm-color-primary-light: #1f437f;
+  --ifm-color-primary-lighter: #2a4d8c;
+  --ifm-color-primary-lightest: #3d68b0;
+
+  --ifm-color-secondary: #c9a227;
+
+  --ifm-background-surface-color: #fdfaf2;
+  --ifm-color-content-secondary: #4a5568;
+
+  --ifm-code-font-size: 92%;
+  --docusaurus-highlighted-code-line-bg: rgba(27, 59, 111, 0.08);
+
+  --ifm-heading-font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --ifm-font-family-base:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 2px rgba(27, 59, 111, 0.08);
+  --ifm-footer-background-color: #0f1f3a;
+
+  --le-gold: #c9a227;
+  --le-gold-soft: #f5e19b;
+  --le-navy-deep: #050d1c;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #f5e19b;
+  --ifm-color-primary-dark: #ecd271;
+  --ifm-color-primary-darker: #e3c34a;
+  --ifm-color-primary-darkest: #c9a227;
+  --ifm-color-primary-light: #f8e9b1;
+  --ifm-color-primary-lighter: #faf0c2;
+  --ifm-color-primary-lightest: #fdf6d9;
+
+  --ifm-color-secondary: #1b3b6f;
+
+  --ifm-background-color: #0f1f3a;
+  --ifm-background-surface-color: #122446;
+  --ifm-navbar-background-color: #0f1f3a;
+  --ifm-navbar-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --ifm-footer-background-color: #050d1c;
+
+  --docusaurus-highlighted-code-line-bg: rgba(245, 225, 155, 0.1);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Typography polish — serifs on headings, sans on body, slightly
+   lighter weight on h1 so the navy doesn't feel heavy.
+   ───────────────────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+article {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Subtle gold underline on links — replaces default solid blue
+   to feel a bit more editorial.
+   ───────────────────────────────────────────────────────────── */
+.markdown a:not(.card):not(.button):not(.menu__link) {
+  text-decoration-color: var(--le-gold);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-thickness 0.15s ease;
+}
+
+.markdown a:hover {
+  text-decoration-thickness: 0.16em;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Footer column titles in gold — matches the brand and gives
+   the dark footer a visual lift.
+   ───────────────────────────────────────────────────────────── */
+.footer__title {
+  color: var(--le-gold-soft);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.footer__copyright a {
+  color: var(--le-gold-soft);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Card lift on hover for the docs index pages.
+   ───────────────────────────────────────────────────────────── */
+.card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 59, 111, 0.12);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Reduced motion — honour user preference.
+   ───────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

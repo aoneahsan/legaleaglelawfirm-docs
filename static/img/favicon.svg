@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 128" role="img" aria-label="Legal Eagle Law Firm">
+  <title>Legal Eagle Law Firm</title>
+  <defs>
+    <linearGradient id="leNavy" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0" stop-color="#1B3B6F"/>
+      <stop offset="0.55" stop-color="#0B1F3A"/>
+      <stop offset="1" stop-color="#050D1C"/>
+    </linearGradient>
+    <linearGradient id="leGold" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0" stop-color="#F5E19B"/>
+      <stop offset="0.35" stop-color="#E1BC52"/>
+      <stop offset="0.7" stop-color="#C9A24B"/>
+      <stop offset="1" stop-color="#8A6A1E"/>
+    </linearGradient>
+    <linearGradient id="leGoldEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" stop-color="#F2D98A"/>
+      <stop offset="1" stop-color="#A88331"/>
+    </linearGradient>
+    <filter id="leShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.4" stdDeviation="1.6" flood-color="#050D1C" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#leShadow)">
+    <!-- Shield outline (heraldic tapered) -->
+    <path d="M60 4 C74 4 88 6 102 12 L102 52 C102 78 86 102 60 118 C34 102 18 78 18 52 L18 12 C32 6 46 4 60 4 Z"
+          fill="url(#leNavy)"/>
+    <path d="M60 4 C74 4 88 6 102 12 L102 52 C102 78 86 102 60 118 C34 102 18 78 18 52 L18 12 C32 6 46 4 60 4 Z"
+          fill="none" stroke="url(#leGoldEdge)" stroke-width="2.2" stroke-linejoin="round"/>
+    <!-- Inner bevel hairline -->
+    <path d="M60 10 C72 10 84 12 96 17 L96 50 C96 74 82 94 60 109 C38 94 24 74 24 50 L24 17 C36 12 48 10 60 10 Z"
+          fill="none" stroke="url(#leGoldEdge)" stroke-width="0.65" opacity="0.65"/>
+  </g>
+
+  <!-- Decorative top star -->
+  <g fill="url(#leGold)" opacity="0.85">
+    <circle cx="60" cy="16" r="1.3"/>
+  </g>
+
+  <!-- EAGLE — front-facing, spread wings, clutching scales -->
+  <g fill="url(#leGold)">
+    <!-- Wings: each wing is a single path with 3 feather notches along bottom edge,
+         swept up and outward from central shoulders -->
+    <!-- Right wing (viewer's right = figure's left) -->
+    <path d="M60 32
+             C72 30 84 32 96 38
+             L90 39 L93.5 44
+             L82 42 L86 47.5
+             L74 44.5 L77 50
+             L66.5 47 L68 51
+             L60 44 Z"/>
+    <!-- Left wing (mirror) -->
+    <path d="M60 32
+             C48 30 36 32 24 38
+             L30 39 L26.5 44
+             L38 42 L34 47.5
+             L46 44.5 L43 50
+             L53.5 47 L52 51
+             L60 44 Z"/>
+
+    <!-- Head: compact hooded form with two crown notches -->
+    <path d="M56.5 26
+             L58 23 L60 24 L62 23 L63.5 26
+             L64.5 31 L60 34 L55.5 31 Z"/>
+    <!-- Beak (hooked) -->
+    <path d="M58.5 33 L60 39 L61.5 33 Z"/>
+  </g>
+  <!-- Eyes -->
+  <circle cx="58.2" cy="28.2" r="0.75" fill="#050D1C"/>
+  <circle cx="61.8" cy="28.2" r="0.75" fill="#050D1C"/>
+
+  <!-- SCALES OF JUSTICE — hanging below eagle's talons -->
+  <g stroke="url(#leGoldEdge)" stroke-linecap="round">
+    <!-- Central column -->
+    <line x1="60" y1="44" x2="60" y2="90" stroke-width="1.8"/>
+    <!-- Crossbar -->
+    <line x1="38" y1="58" x2="82" y2="58" stroke-width="1.4"/>
+    <!-- Chains -->
+    <line x1="42" y1="58" x2="42" y2="64" stroke-width="0.7"/>
+    <line x1="39.5" y1="64" x2="44.5" y2="64" stroke-width="0.7"/>
+    <line x1="78" y1="58" x2="78" y2="64" stroke-width="0.7"/>
+    <line x1="75.5" y1="64" x2="80.5" y2="64" stroke-width="0.7"/>
+  </g>
+  <!-- Pans (filled) -->
+  <g fill="url(#leGold)">
+    <path d="M34 64 H50 L46.5 71 H37.5 Z"/>
+    <path d="M70 64 H86 L82.5 71 H73.5 Z"/>
+    <!-- Top finial on column -->
+    <circle cx="60" cy="44" r="1.8"/>
+    <!-- Base pedestal -->
+    <rect x="54" y="87.5" width="12" height="2.2" rx="1"/>
+    <path d="M50 89.7 H70 L66 98 H54 Z"/>
+    <rect x="46" y="98" width="28" height="2.4" rx="1"/>
+  </g>
+
+  <!-- Small laurel accents at base of shield interior (tiny, elegant) -->
+  <g fill="url(#leGold)" opacity="0.55">
+    <path d="M32 96 Q36 100 40 101 Q36 98 32 96 Z"/>
+    <path d="M88 96 Q84 100 80 101 Q84 98 88 96 Z"/>
+  </g>
+</svg>

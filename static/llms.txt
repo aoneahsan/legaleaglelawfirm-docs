@@ -1,0 +1,69 @@
+# Legal Eagle Law Firm — Documentation
+
+> Modern legal services platform for Pakistan, plus a multi-tenant
+> practice-management SaaS for lawyers. This site documents how
+> visitors, firm clients, lawyers (SaaS users), and firm staff use
+> the Legal Eagle platform at legaleaglelaws.com.
+
+The Legal Eagle Law Firm is the practice of **Advocate Maaz Ahmed Warriach**
+(Lahore, Pakistan). The platform is built and maintained by **Ahsan Mahmood**
+([aoneahsan.com](https://aoneahsan.com)).
+
+This `llms.txt` file follows the [llmstxt.org](https://llmstxt.org) format and
+is a curated map for large language models and AI search engines.
+
+## Key URLs
+
+- App: <https://legaleaglelaws.com>
+- Documentation: <https://docs.legaleaglelaws.com>
+- Free consultation booking: <https://legaleaglelaws.com/free-consultation>
+- AI legal assistant: in-app chatbot (lower-right corner of every page)
+- Find a lawyer: <https://legaleaglelaws.com/legal-persons>
+- Public lawyer profiles: `<https://legaleaglelaws.com/lawyer/:slug>`
+- GitHub (this docs site): <https://github.com/aoneahsan/legaleaglelawfirm-docs>
+
+## User Guide
+
+- [Introduction](https://docs.legaleaglelaws.com/docs/user-guide/intro): What Legal Eagle is and who it's for.
+- [Find a lawyer](https://docs.legaleaglelaws.com/docs/user-guide/visitors/find-a-lawyer): Browse the Punjab Bar Council directory of ~15,700 advocates.
+- [Free consultation booking](https://docs.legaleaglelaws.com/docs/user-guide/visitors/free-consultation-booking): How a visitor books a Google Meet consultation with the firm.
+- [AI legal assistant](https://docs.legaleaglelaws.com/docs/user-guide/visitors/ai-legal-assistant): Six-tier chatbot (cache → curated KB → LLM) for Pakistani-law questions.
+- [Legal persons directory](https://docs.legaleaglelaws.com/docs/user-guide/visitors/legal-persons-directory): How the bar-voter search works and what data is shown.
+
+## Firm clients
+
+- [Dashboard overview](https://docs.legaleaglelaws.com/docs/user-guide/clients/dashboard-overview): What firm clients see when they sign in.
+- [Your cases](https://docs.legaleaglelaws.com/docs/user-guide/clients/your-cases): Tracking matters the firm is handling for you.
+- [Appointments](https://docs.legaleaglelaws.com/docs/user-guide/clients/appointments): Upcoming meetings, Google Meet links, reschedule/cancel.
+- [Help requests](https://docs.legaleaglelaws.com/docs/user-guide/clients/help-requests): Send messages to the firm and track replies.
+- [Profile and preferences](https://docs.legaleaglelaws.com/docs/user-guide/clients/profile-and-preferences): Theme, contact details, account.
+- [Legal persons search](https://docs.legaleaglelaws.com/docs/user-guide/clients/legal-persons-search): Searching the bar-voter directory from inside the dashboard.
+
+## Architecture (high-level, public-safe)
+
+- [Stack overview](https://docs.legaleaglelaws.com/docs/architecture/intro): React 19 + Radix UI + Tailwind v4 + Capacitor 8 + Firebase Firestore + Cloudflare Workers + Neon Postgres.
+
+## Trust & contact
+
+- Firm: Legal Eagle Law Firm, Office No. 3, 2nd Floor, Kareem Chamber 2, Mozang, Lahore 54000, Pakistan.
+- Phone / WhatsApp: +92 339 0108134
+- Email: info@legaleaglelaws.com (general), legallaw669@gmail.com (legal matters)
+- Office hours: Mon–Sat, 9 AM – 6 PM PKT, plus 24/7 digital assistance.
+
+## Author
+
+Documentation, application, and SaaS platform built by **Ahsan Mahmood** —
+full-stack engineer focused on React, Capacitor, and Firebase.
+- Portfolio: <https://aoneahsan.com>
+- LinkedIn: <https://linkedin.com/in/aoneahsan>
+- GitHub: <https://github.com/aoneahsan>
+- npm: <https://www.npmjs.com/~aoneahsan>
+- Email: <mailto:aoneahsan@gmail.com>
+
+## License
+
+Documentation content is licensed under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+You may quote, summarise, and reference this content with attribution. The
+Legal Eagle Law Firm name, logos, and brand assets remain trademarks of
+Advocate Maaz Ahmed Warriach.

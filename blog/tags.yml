@@ -1,0 +1,9 @@
+announcements:
+  label: Announcements
+  permalink: /announcements
+  description: Releases, infrastructure changes, and platform announcements.
+
+documentation:
+  label: Documentation
+  permalink: /documentation
+  description: Docs site updates, structure changes, and writing notes.
