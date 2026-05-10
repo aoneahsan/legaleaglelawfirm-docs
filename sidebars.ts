@@ -29,6 +29,20 @@ const sidebars: SidebarsConfig = {
         'user-guide/clients/legal-persons-search',
       ],
     },
+    {
+      type: 'category',
+      label: 'For lawyers (SaaS workspace)',
+      collapsed: false,
+      link: { type: 'generated-index', title: 'For lawyers (SaaS workspace)', slug: '/user-guide/lawyers' },
+      items: [
+        'user-guide/lawyers/getting-started',
+        'user-guide/lawyers/contacts',
+        'user-guide/lawyers/cases',
+        'user-guide/lawyers/notes',
+        'user-guide/lawyers/calendar',
+        'user-guide/lawyers/public-profile',
+      ],
+    },
   ],
 
   adminSidebar: [

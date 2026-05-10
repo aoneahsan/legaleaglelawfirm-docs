@@ -27,7 +27,6 @@ const config: Config = {
   projectName: 'legaleaglelawfirm-docs',
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   onBrokenAnchors: 'warn',
 
   i18n: {
@@ -37,6 +36,9 @@ const config: Config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
 
