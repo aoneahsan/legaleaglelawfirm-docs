@@ -41,6 +41,18 @@ const sidebars: SidebarsConfig = {
         'user-guide/lawyers/notes',
         'user-guide/lawyers/calendar',
         'user-guide/lawyers/public-profile',
+        {
+          type: 'category',
+          label: 'Integrations',
+          collapsed: false,
+          link: { type: 'doc', id: 'user-guide/lawyers/integrations/overview' },
+          items: [
+            'user-guide/lawyers/integrations/google-drive',
+            'user-guide/lawyers/integrations/google-calendar',
+            'user-guide/lawyers/integrations/court-sync',
+            'user-guide/lawyers/integrations/billing-and-plans',
+          ],
+        },
       ],
     },
   ],
