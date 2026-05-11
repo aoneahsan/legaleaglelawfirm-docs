@@ -62,8 +62,14 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Admin guide',
       collapsed: false,
-      link: { type: 'generated-index', title: 'Admin guide', slug: '/admin' },
-      items: ['admin/intro'],
+      link: { type: 'doc', id: 'admin/intro' },
+      items: [
+        'admin/sign-in-and-rbac',
+        'admin/blog-and-comments',
+        'admin/plan-and-user-management',
+        'admin/calendar-and-availability',
+        'admin/chatbot-tuning',
+      ],
     },
   ],
 
