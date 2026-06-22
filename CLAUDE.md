@@ -11,6 +11,10 @@ This repo contains ONLY the docs. The application source is private and lives in
 indexes far better in Google/Bing and AI answer engines than a heavy SPA, and it ships rich per-page
 schema without exposing proprietary app code.
 
+## Task Speed Over Docs (IRON-SOLID — BEHAVIORAL)
+
+Finish the real task fast + correctly FIRST; docs/trackers/sync are a footnote (≤~20% of effort) — never let recording outpace the fix. HARD STOP when doc work outpaces the change → ship, then ONE line if anything. No new summary/status/completion files unless asked; edit/delete over add; delete stale docs. Full rule: `~/.claude/CLAUDE.md`. (Est. 2026-06-19)
+
 ---
 
 ## What this is
