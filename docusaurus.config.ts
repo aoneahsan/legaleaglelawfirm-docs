@@ -129,6 +129,50 @@ const config: Config = {
         },
       }),
     },
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LegalService',
+        name: 'Legal Eagle Law Firm',
+        url: APP_URL,
+        image: `${PRIMARY_URL}/img/logo.svg`,
+        priceRange: 'Free initial consultation',
+        founder: { '@type': 'Person', name: 'Maaz Ahmed Warriach', jobTitle: 'Advocate' },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Office No. 3, 2nd Floor, Kareem Chamber 2, Mozang',
+          addressLocality: 'Lahore',
+          postalCode: '54000',
+          addressCountry: 'PK',
+        },
+        areaServed: { '@type': 'Country', name: 'Pakistan' },
+        availableLanguage: ['English', 'Urdu'],
+        telephone: '+92-339-0108134',
+        email: 'info@legaleaglelaws.com',
+        sameAs: [APP_URL, GITHUB_REPO],
+      }),
+    },
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Legal Eagle Law Firm',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web, Android, iOS',
+        url: APP_URL,
+        downloadUrl:
+          'https://play.google.com/store/apps/details?id=com.aoneahsan.legaleaglelaws',
+        description:
+          'Legal services platform for Pakistan plus a practice-management SaaS for lawyers: find a lawyer, book a free consultation, ask an AI legal assistant, and run a law practice (cases, calendar, contacts, court-hearing sync).',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'PKR' },
+        author: { '@type': 'Person', name: 'Ahsan Mahmood', url: 'https://aoneahsan.com' },
+        publisher: { '@type': 'Organization', name: 'Legal Eagle Law Firm' },
+      }),
+    },
   ],
 
   presets: [
@@ -228,6 +272,12 @@ const config: Config = {
           position: 'left',
           label: 'Architecture',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'trustSidebar',
+          position: 'left',
+          label: 'Trust & Policy',
+        },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: APP_URL,
@@ -266,6 +316,7 @@ const config: Config = {
             { label: 'User guide', to: '/docs/user-guide/intro' },
             { label: 'Admin guide', to: '/docs/admin/intro' },
             { label: 'Architecture', to: '/docs/architecture/intro' },
+            { label: 'Trust & policy', to: '/docs/trust/privacy-posture' },
             { label: 'Blog', to: '/blog' },
           ],
         },
@@ -287,7 +338,7 @@ const config: Config = {
             { label: 'npm', href: 'https://www.npmjs.com/~aoneahsan' },
             {
               label: 'Support this work ❤',
-              href: 'https://aoneahsan.com/payment?project-id=legaleaglelawfirm&project-identifier=com.legaleaglelaws.app',
+              href: 'https://aoneahsan.com/payment?project-id=legaleaglelawfirm&project-identifier=com.aoneahsan.legaleaglelaws',
             },
           ],
         },

@@ -11,13 +11,13 @@ keywords:
   - neon postgres lawyer search
   - ahsan mahmood architecture
 last_update:
-  date: 2026-05-10
+  date: 2026-06-23
   author: Ahsan Mahmood
 ---
 
 # Architecture — overview
 
-The Legal Eagle platform is a single React application that ships to the web (Firebase Hosting) and to Android and iOS (Capacitor). It uses Firebase Firestore for most domain data, Cloudflare Workers for anything that needs server-side secrets, and Neon Postgres for one specific dataset (the bar voter directory) where ranked text search matters more than realtime sync. This page is the high-level orientation; deeper pages are scheduled for subsequent documentation batches.
+The Legal Eagle platform is a single React application that ships to the web (Firebase Hosting) and to Android and iOS (Capacitor). It uses Firebase Firestore for most domain data, Cloudflare Workers for anything that needs server-side secrets, and Neon Postgres for one specific dataset (the bar voter directory) where ranked text search matters more than realtime sync. This page is the high-level orientation; the deeper pages — [Stack overview](./stack-overview.md), [Data flow](./data-flow.md), [Theme system](./theme-system.md), [Mobile build](./mobile-build.md), and [SEO & AEO posture](./seo-posture.md) — go further on each layer.
 
 This documentation deliberately avoids leaking internal endpoints, secret names, and Firestore collection paths. The application source is in a private repository. What you see here is the **credibility-and-orientation** view — enough to evaluate the platform's posture, not enough to weaponise.
 
@@ -30,7 +30,7 @@ flowchart LR
   Browser -->|booking, chatbot, court-sync, neon-backed search| Workers[Cloudflare Workers]
   Workers -->|Calendar API| Google[(Google Calendar + Meet)]
   Workers -->|Drive API| GoogleDrive[(Google Drive of each SaaS lawyer)]
-  Workers -->|LLM chain| LLMs{{Workers AI / Gemini / Groq}}
+  Workers -->|LLM chain| LLMs{{OpenAI primary → free fallbacks}}
   Workers -->|advanced search| Neon[(Neon Postgres - bar voter directory)]
   Browser -.->|file uploads| FilesHub[(FilesHub object storage)]
 ```
@@ -72,7 +72,7 @@ The platform uses a project prefix (`le_`) on every collection because the under
 Three workers are in play:
 
 - **Calendar worker** — handles consultation booking. Authenticates as the firm's Google Calendar account, creates events, attaches Meet links, encrypts the refresh token at rest with AES-256.
-- **Chatbot worker** — runs the six-tier answer pipeline, manages the LLM provider chain (CF Workers AI → Gemini free → Groq free → Gemini paid → Groq paid), enforces daily rate limits in Firestore.
+- **Chatbot worker** — runs the six-tier answer pipeline, manages the LLM provider chain (OpenAI primary, then free fallbacks: Cloudflare Workers AI → Gemini free → Groq free, then paid fallbacks), skips the paid provider when a daily cost cap or kill switch is hit, and enforces rate limits in Firestore. See [Data flow](./data-flow.md) for the full pipeline.
 - **Legal persons worker** — fronts Neon Postgres for the bar voter directory. Uses parameterised queries, applies audience-aware masking, enforces per-IP rate limits.
 
 Each worker has a project-prefixed name (`legaleagle-*`) so it does not collide with other Cloudflare projects on the same account.

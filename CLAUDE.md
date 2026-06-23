@@ -1,10 +1,12 @@
 # Legal Eagle Law Firm — Docs (CLAUDE.md)
 
-**Last Updated**: 2026-05-29
+**Last Updated**: 2026-06-23
 
 Public, openly-licensed (CC BY 4.0) **documentation site** for the Legal Eagle Law Firm platform
-(parent app: `com.legaleaglelaws.app`, https://legaleaglelaws.com — a private-source React 19 +
+(parent app: `com.aoneahsan.legaleaglelaws`, https://legaleaglelaws.com — a private-source React 19 +
 Capacitor 8 legal-services platform + lawyer practice-management SaaS for Pakistan).
+
+**Repo visibility:** PUBLIC (flipped 2026-06-23 per the fleet docs-public policy — docs repos are public for free GitHub Pages; the app repo stays private).
 
 This repo contains ONLY the docs. The application source is private and lives in a separate repo
 (`legaleaglelawfirm`). The split is intentional: a fast, static, openly-licensed Docusaurus site
@@ -20,7 +22,7 @@ Finish the real task fast + correctly FIRST; docs/trackers/sync are a footnote (
 ## What this is
 
 - **Stack**: Docusaurus 3.10.1 · React 19 · TypeScript 6 · MDX 3 · Mermaid diagrams · `@docusaurus/faster` (Rspack) · Yarn 4.14.1 · Node ≥20.
-- **Content today**: 29 Markdown doc pages (User Guide, Admin Guide, Architecture) + 1 blog post + 1 custom React landing page (`src/pages/index.tsx`).
+- **Content today**: 40 Markdown doc pages (User Guide incl. Mobile app, Admin Guide, Architecture deep-dives, Trust & Policy) + 1 blog post + 1 custom React landing page (`src/pages/index.tsx`). Site-wide JSON-LD: Organization + WebSite + LegalService + SoftwareApplication.
 - **Live URLs** (3 deploy targets, one source):
   - Firebase Hosting (firm domain): https://docs.legaleaglelaws.com
   - Firebase Hosting (developer domain): https://legaleaglelaws-docs.aoneahsan.com

@@ -15,6 +15,7 @@ is a curated map for large language models and AI search engines.
 ## Key URLs
 
 - App: <https://legaleaglelaws.com>
+- Android app (Google Play): <https://play.google.com/store/apps/details?id=com.aoneahsan.legaleaglelaws>
 - Documentation: <https://docs.legaleaglelaws.com>
 - Free consultation booking: <https://legaleaglelaws.com/free-consultation>
 - AI legal assistant: in-app chatbot (lower-right corner of every page)
@@ -39,11 +40,27 @@ is a curated map for large language models and AI search engines.
 - [Profile and preferences](https://docs.legaleaglelaws.com/docs/user-guide/clients/profile-and-preferences): Theme, contact details, account.
 - [Legal persons search](https://docs.legaleaglelaws.com/docs/user-guide/clients/legal-persons-search): Searching the bar-voter directory from inside the dashboard.
 
+## Mobile
+
+- [Using the mobile app](https://docs.legaleaglelaws.com/docs/user-guide/mobile-app): Install the Android app from Google Play or use the web app in any mobile browser; online-required, no offline mode.
+
 ## Architecture (high-level, public-safe)
 
-- [Stack overview](https://docs.legaleaglelaws.com/docs/architecture/intro): React 19 + Radix UI + Tailwind v4 + Capacitor 8 + Firebase Firestore + Cloudflare Workers + Neon Postgres.
+- [Architecture overview](https://docs.legaleaglelaws.com/docs/architecture/intro): The big picture — web + Android/iOS from one React codebase.
+- [Stack overview](https://docs.legaleaglelaws.com/docs/architecture/stack-overview): React 19 + Radix UI + Tailwind v4 + Capacitor 8 + Firebase Firestore + Cloudflare Workers + Neon Postgres, with versions and reasoning.
+- [Data flow](https://docs.legaleaglelaws.com/docs/architecture/data-flow): How reads/writes move through Firestore and the Cloudflare Workers; the six-tier AI pipeline with OpenAI primary and free fallbacks.
+- [Theme system](https://docs.legaleaglelaws.com/docs/architecture/theme-system): Design tokens, the seven-control customiser, cross-device sync, and the boot loader.
+- [Mobile build](https://docs.legaleaglelaws.com/docs/architecture/mobile-build): Capacitor 8, permission primers, icon/splash generation, Android edge-to-edge, Play posture.
+- [SEO & AEO posture](https://docs.legaleaglelaws.com/docs/architecture/seo-posture): Build-time static HTML, per-page JSON-LD, AI-bot allowlist, sitemap/feed/llms.txt.
 
-## Trust & contact
+## Trust & policy
+
+- [Privacy posture](https://docs.legaleaglelaws.com/docs/trust/privacy-posture): What data is collected, the third-party processors, and AI-assistant consent (opt-out).
+- [Security overview](https://docs.legaleaglelaws.com/docs/trust/security-overview): Google-only auth, Firestore ownership rules, secret isolation in workers, encryption, rate limiting.
+- [Accessibility statement](https://docs.legaleaglelaws.com/docs/trust/accessibility-statement): Radix primitives, keyboard nav, reduced-motion, scaling/font controls, known gaps.
+- [Data retention & deletion](https://docs.legaleaglelaws.com/docs/trust/data-retention): Retention, AI-interaction retention, and how to delete your account and data.
+
+## Contact
 
 - Firm: Legal Eagle Law Firm, Office No. 3, 2nd Floor, Kareem Chamber 2, Mozang, Lahore 54000, Pakistan.
 - Phone / WhatsApp: +92 339 0108134

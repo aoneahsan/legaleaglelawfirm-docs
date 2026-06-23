@@ -3,6 +3,7 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   guideSidebar: [
     'user-guide/intro',
+    'user-guide/mobile-app',
     {
       type: 'category',
       label: 'For visitors',
@@ -79,7 +80,29 @@ const sidebars: SidebarsConfig = {
       label: 'Architecture',
       collapsed: false,
       link: { type: 'generated-index', title: 'Architecture', slug: '/architecture' },
-      items: ['architecture/intro'],
+      items: [
+        'architecture/intro',
+        'architecture/stack-overview',
+        'architecture/data-flow',
+        'architecture/theme-system',
+        'architecture/mobile-build',
+        'architecture/seo-posture',
+      ],
+    },
+  ],
+
+  trustSidebar: [
+    {
+      type: 'category',
+      label: 'Trust & policy',
+      collapsed: false,
+      link: { type: 'generated-index', title: 'Trust & policy', slug: '/trust' },
+      items: [
+        'trust/privacy-posture',
+        'trust/security-overview',
+        'trust/accessibility-statement',
+        'trust/data-retention',
+      ],
     },
   ],
 };
