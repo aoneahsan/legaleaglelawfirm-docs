@@ -23,9 +23,18 @@ Thumbs.db
 
 # Environment (this repo is PUBLIC — env values must never be committed)
 .env
-.env.local
-.env.*.local
-.env.production
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Secrets / keystores / credentials (PUBLIC repo — never track)
+*.jks
+*.keystore
+key.properties
+keystore.properties
+*service-account*.json
+.npmrc
 
 # Firebase
 .firebase/
@@ -36,3 +45,7 @@ firestore-debug.log
 # Misc
 .cache-loader/
 *.log
+
+# Custom (always present)
+*.ignore.*
+project-record-ignore/
